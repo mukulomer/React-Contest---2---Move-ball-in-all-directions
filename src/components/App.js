@@ -43,12 +43,13 @@ const App = () => {
   }, []);
 
   const reset = () => {
-    Left = 0;
-    Top = 0;
-    let ballPositioncopy = { ...ballPosition };
-    ballPositioncopy.left = `${Left}px`;
-    ballPositioncopy.top = `${Top}px`;
-    setBallPosition(ballPositioncopy);
+    setRenderBall(false);
+    setX(0);
+    setY(0);
+    setBallPosition({
+      left: "0px",
+      top: "0px"
+    });
   };
   const handelClick = () => {
     let renderball = true;
